@@ -1,5 +1,7 @@
 main{
     max-width: 1440px;
+    border: 3px solid tan;
+    padding: 10px;
     margin: 50px auto;
 }
 main h1{
@@ -29,4 +31,31 @@ main h1{
 
 .vertical-gallery img{
     height: calc( (100% - 5px)/2 ) ;
+}
+.horizontal-gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+/* -------Mobile Device Responsive------- */
+
+@media screen and (max-width: 576px) {
+    .row{
+        flex-direction: column;
+        height: auto;
+    }
+    .vertical-gallery img{
+        height: 100%;
+    }
+    .horizontal-gallery{
+        grid-template-columns:  1fr;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width:992px){
+    .row{
+        flex-direction: column;
+        height: auto;
+    }
 }
